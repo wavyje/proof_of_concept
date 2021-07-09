@@ -7,6 +7,7 @@ use iota_streams::{
         Author,
         Subscriber,
         Transport,
+        ChannelType
     },
     core::{
         panic_if_not,
@@ -38,7 +39,7 @@ pub struct RegistrationOffice<T> {
 impl<Trans: Transport> RegistrationOffice<Trans> {
 
     pub fn new(seed: &str, encoding: &str, payload_length: usize, multi_branching: bool, transport: Trans, name: &str) -> Self{
-        let author = Author::new(seed, encoding, payload_length, multi_branching, transport);
+        let author = Author::new(seed,  ChannelType::MultiBranch, transport);
         
         Self {author: author,
               name: String::from(name),

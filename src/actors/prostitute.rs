@@ -11,8 +11,8 @@ pub struct Prostitute {
 }
  
 impl Prostitute {
-    pub fn new(channel_address: Address, keyload_link: Address, signed_message_link: Address, tagged_message_link:Address) -> Self{
-            Self {  hash: String::from("Hash of the Json object[prostitute's data]"),
+    pub fn new(channel_address: Address, keyload_link: Address, signed_message_link: Address, tagged_message_link:Address, number: String) -> Self{
+            Self {  hash: String::from("Hash of the Json object[prostitute's data]") + &number,
                     channel_address: channel_address,
                     keyload_link: keyload_link,
                     signed_message_link: signed_message_link,

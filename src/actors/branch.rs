@@ -83,7 +83,7 @@ pub fn publish_certificate(transport: Rc<RefCell<Client>>) -> Result<()>{
     //
     // The last three links will be exchanged during the following process
 
-    let mut prostitute_save = Prostitute::new(announce_link.clone(), announce_link.clone(), announce_link.clone(), announce_link.clone());
+    let mut prostitute_save = Prostitute::new(announce_link.clone(), announce_link.clone(), announce_link.clone(), announce_link.clone(), String::from("One"));
 
     // Registration office creates a new branch for the prostitute via keyload
 

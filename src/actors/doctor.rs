@@ -34,7 +34,7 @@ pub struct Doctor<T>{
 impl<Trans: Transport> Doctor<Trans> {
 
     pub fn new(seed: &str, encoding: &str, payload_length: usize, transport: Trans, name: &str) -> Self {
-        let subscriber = Subscriber::new(seed, encoding, payload_length, transport);
+        let subscriber = Subscriber::new(seed, transport);
         
         Self{name: String::from(name),
             subscriber:  subscriber}

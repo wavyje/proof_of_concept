@@ -7,7 +7,7 @@ edition = "2018"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-iota-streams = { git = "https://github.com/iotaledger/streams.git", branch = "chrysalis-2" }
+iota-streams = { git = "https://github.com/iotaledger/streams.git", branch = "develop" }
 iota-client = { git = "https://github.com/iotaledger/iota.rs", branch = "dev" }
 anyhow = { version = "1.0", default-features = false }
 tokio = {version = "1.1"}

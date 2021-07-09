@@ -39,7 +39,7 @@ pub struct Customer<T>{
 impl<Trans: Transport> Customer<Trans> {
 
     pub fn new(seed: &str, encoding: &str, payload_length: usize, transport: Trans) -> Self {
-        let subscriber = Subscriber::new(seed, encoding, payload_length, transport);
+        let subscriber = Subscriber::new(seed, transport);
         
         Self{ subscriber:  subscriber}
     }
